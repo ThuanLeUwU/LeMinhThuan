@@ -1,0 +1,5 @@
+- Create "formattedBalances" function but don't use it.
+- "lhsPriority" is not defined but is used to consider conditions.
+- If you have used  "filter", you should not "return" it.
+- Define type is complicated, the "interface" is not clearly understood.
+- usdValue is passed directly to props instead of creating a variable like the template.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum 1 to N</title>
+  </head>
+  <body>
+    <script>
+      var n;
+      while (true) {
+        n = parseInt(prompt("Input any integer N:"));
+        if (!isNaN(n) && Number.isInteger(n)) {
+          break; // Exit the loop if a valid integer is entered
+        }
+        alert("Please enter a valid integer.");
+      }
+
+      // arithmetic series formula
+      var sum_to_n_a = function (n) {
+        return (n * (n + 1)) / 2;
+      };
+
+      // iterative approach
+      var sum_to_n_b = function (n) {
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+          sum += i;
+        }
+        return sum;
+      };
+
+      // recursive approach
+      var sum_to_n_c = function (n) {
+        if (n === 1) {
+          return 1;
+        } else {
+          return n + sum_to_n_c(n - 1);
+        }
+      };
+      document.write("Method 1 (arithmetic series formula): ", sum_to_n_a(n));
+      document.write("<br/> Method 2 (iterative approach): ", sum_to_n_a(n));
+      document.write("<br/> Method 3 (recursive approach): ", sum_to_n_a(n));
+    </script>
+  </body>
+</html>
